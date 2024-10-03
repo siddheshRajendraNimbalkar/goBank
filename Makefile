@@ -1,4 +1,4 @@
-.PHONY: postgres createdb dropdb migrateUp migrateDown sqlc
+.PHONY: postgres createdb dropdb migrateUp migrateDown sqlc test
 
 postgres:
 	docker run --name goPostGDB -e POSTGRES_USER=root -e POSTGRES_PASSWORD=goBankdb -p 5432:5432 -d postgres
@@ -17,3 +17,6 @@ migrateDown:
 
 sqlc:
 	sqlc generate
+
+test:
+	go test -v -cover ./...

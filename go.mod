@@ -1,4 +1,4 @@
-module tutorial.sqlc.dev/app
+module github.com/siddheshRajendraNimbalkar/goBank
 
 go 1.23.1
 
